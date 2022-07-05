@@ -49,11 +49,11 @@ if __name__ == "__main__":
     X_train, y_train, PAI_ID = load_data(training_file, N_ROWS, N_COLS)
 
     # Random Forest CLASSIFIER
-    print "Training data ETC"
+    print("Training data ETC")
     clf = ExtraTreesClassifier(n_estimators=20, min_samples_leaf=10, n_jobs=8)
     start_time = time.time()
     clf.fit(X_train, y_train)
     elapsed_time = time.time() - start_time
-    print "ExtraTreesClassifier %.3f s" % elapsed_time
+    print("ExtraTreesClassifier %.3f s" % elapsed_time)
     joblib.dump(clf, output_folder + args["name"] + "_extraTreesClassifier" + '.pkl')
-    print "Generated:", output_folder + args["name"] + "_extraTreesClassifier" + '.pkl'
+    print("Generated:", output_folder + args["name"] + "_extraTreesClassifier" + '.pkl')
