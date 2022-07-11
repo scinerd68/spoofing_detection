@@ -33,8 +33,8 @@ if __name__ == "__main__":
     cascPath = "haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + cascPath)
 
-    # img_bgr = cv2.imread('test_img/anh_the.jpg')
-    img_bgr = cv2.imread('test_img/real1.jpg')
+    img_bgr = cv2.imread('test_img/anh_the.jpg')
+    # img_bgr = cv2.imread('test_img/real1.jpg')
     # img_bgr = cv2.imread('test_img/20194452.jpg')
     scale_percent = 40 # percent of original size
     width = int(img_bgr.shape[1] * scale_percent / 100)
